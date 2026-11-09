@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <link rel="icon" type="image/png" href="/Icons/website_favicon.jpg" />
+  <link rel="apple-touch-icon" href="/Icons/website_favicon.jpg" />
+  <meta name="theme-color" content="#16a34a" />
   <meta name="google-site-verification" content="y-O-DSnkiA1TPIhyRd1yGbruhtiBSzT9VxwC-A4NMcs" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -352,15 +355,17 @@
     }
   </style>
 </head>
-<script async="async" data-cfasync="false" src="https://bancadeltempoidea.org/21/90fab389c32e27fe770c698828249294"></script>
+<script async="async" data-cfasync="false"
+  src="https://bancadeltempoidea.org/21/90fab389c32e27fe770c698828249294"></script>
 <div id="container-90fab389c32e27fe770c698828249294"></div>
+
 <body>
 
   <div class="wrap">
     <header class="top">
       <a class="logo" href="#"><i aria-hidden="true">▼</i><span id="siteName">APK Depot</span></a>
       <div class="tools">
-        <a class="btn" href="https://directyp.org/4/87bde4463bc9fd5c1024e481be104ada" >How to install</a>
+        <a class="btn" href="https://directyp.org/4/87bde4463bc9fd5c1024e481be104ada">How to install</a>
         <button class="btn" id="themeBtn" aria-label="Switch light or dark theme">Theme</button>
       </div>
       <script data-cfasync="false" src="https://aarems.org/1/d754672b2e050aa3d00543b68ad82d12"></script>
@@ -432,7 +437,7 @@
         desc: "Replace this sample with your own game APK.",
         icon: "/Icons/Movie_box_icon.png",
         link: "https://www.dropbox.com/scl/fi/ohe2uupe5a332or58nop3/movie_box.apk?rlkey=xc0yu8qvn0yozqik2qyggfiuq&st=qaqxpt74&dl=1"
-        
+
       },
       {
         name: "TikTok",
@@ -460,7 +465,7 @@
         desc: "Replace this sample with your own game APK.",
         icon: "/Icons/capcut_icon.png",
         link: "https://www.dropbox.com/scl/fi/frjcy5ylj8z5wg9tput0u/CapCut.apk?rlkey=dcrbff7vjigtrhn78a8lw644g&st=o8sr0fj0&dl=1"
-        
+
       },
       {
         name: "Happy Modd",
@@ -507,7 +512,7 @@
         icon: "/Icons/Telegram_icon.png",
         link: "https://www.dropbox.com/scl/fi/jud4mmg9k9btx1yriwoyf/Telegram_13.1.0_APKPure.xapk?rlkey=uxipog3u6zxxbmkx1wk7mg9e5&st=p5as26de&dl=1"
       }
-      
+
     ];
 
     /* =====================================================================
@@ -522,7 +527,7 @@
     $("#dmca").href = SITE.reportLink;
     $("#year").textContent = new Date().getFullYear();
 
-    function esc(s) {return String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]))}
+    function esc(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])) }
 
     function buildChips() {
       const cats = ["All", ...new Set(APKS.map(a => a.category).filter(Boolean))];
@@ -551,7 +556,7 @@
       }).join("") : `<div class="empty">No apps match “${esc(term)}”. Try another word or choose All.</div>`;
     }
 
-    $("#q").addEventListener("input", e => {term = e.target.value; render();});
+    $("#q").addEventListener("input", e => { term = e.target.value; render(); });
     $("#chips").addEventListener("click", e => {
       const b = e.target.closest(".chip"); if (!b) return;
       cat = b.dataset.c; buildChips(); render();
